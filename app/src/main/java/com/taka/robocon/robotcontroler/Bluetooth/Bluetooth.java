@@ -28,7 +28,7 @@ public class Bluetooth {
 
     // 接続
     public boolean connect(UUID uuid, String devName){
-        boolean result =false;
+        boolean result = false;
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         Log.d(LOG_TITLE, "ADAPTER", null);
         if(bluetoothAdapter != null) {

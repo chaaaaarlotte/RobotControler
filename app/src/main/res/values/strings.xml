@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">RobotControler</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Button Name -->
+    <string name="pwmUp"> PWM UP </string>
+    <string name="pwmDown">PWM DOWN</string>
+
+    <string name="left"></string>
+    <string name="right"></string>
+    <string name="up"></string>
+    <string name="down"></string>
+
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+
+    <string name="pwmSeekBar">速度</string>
 </resources>

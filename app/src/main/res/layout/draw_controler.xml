@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".RobotControler"
+    tools:showIn="@layout/activity_robotcontroler">
+
+    <com.taka.robocon.robotcontroler.TouchArea
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/controlerButtons"
+        android:id="@+id/touch_area"
+        android:layout_alignParentTop="true" />
+    <LinearLayout
+        android:id="@+id/controlerButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom|left"
+        android:layout_alignParentBottom="true"
+        android:background="@color/ButtonAreaBackground">
+        <GridLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_alignParentBottom="true">
+            <ImageButton android:id="@+id/leftButton"
+                android:src="@drawable/ic_chevron_left_24dp"
+                android:layout_column="0"
+                android:layout_row="1"/>
+            <ImageButton android:id="@+id/rightButton"
+                android:layout_column="2"
+                android:src="@drawable/ic_chevron_right_24dp"/>
+            <ImageButton android:id="@+id/upButton"
+                android:src="@drawable/ic_expand_less_24dp"
+                android:layout_column="1"
+                android:layout_row="0"/>
+            <ImageButton android:id="@+id/downButton"
+                android:src="@drawable/ic_expand_more_24dp"
+                android:layout_column="1"
+                android:layout_row="2"/>
+            <ImageButton android:id="@+id/stopButton"
+                android:src="@drawable/ic_stop_24dp"
+                android:layout_column="1"
+                android:layout_row="1"/>
+        </GridLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:text="@string/pwmSeekBar"/>
+            <SeekBar android:id="@+id/pwmSeekBar"
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_row="1"
+                android:progress="75"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageButton android:id="@+id/leftTernButton"
+                    android:src="@drawable/ic_undo_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageButton android:id="@+id/rightTernButton"
+                    android:src="@drawable/ic_redo_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

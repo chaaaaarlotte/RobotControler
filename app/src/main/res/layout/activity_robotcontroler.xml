@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.taka.robocon.robotcontroler.Map">
+    tools:context=".RobotControler">
 
-    <include layout="@layout/content_map" />
-
+    <include layout="@layout/draw_controler" />
 </android.support.design.widget.CoordinatorLayout>
