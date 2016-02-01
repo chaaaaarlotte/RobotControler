@@ -58,7 +58,7 @@ public class BluetoothConnectionService extends Service implements LineRecieveLi
             cacheMessage = cacheMessage.trim();
             if (!cacheMessage.isEmpty()) {
                 // 受信完了後の処理
-                
+
             }
         }
     }

@@ -8,7 +8,7 @@
     tools:context=".RobotControler"
     tools:showIn="@layout/activity_robotcontroler">
 
-    <com.taka.robocon.robotcontroler.TouchArea
+    <com.taka.robocon.robotcontroler.Contorler.TouchArea
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/controlerButtons"

@@ -1,4 +1,4 @@
-package com.taka.robocon.robotcontroler;
+package com.taka.robocon.robotcontroler.Contorler;
 
 
 import android.content.Context;
@@ -19,7 +19,7 @@ import android.graphics.Bitmap.Config;
 import android.graphics.PorterDuff.Mode;
 
 // memo
-// onTouchMoveイベントは20msごとまたは10msごとに呼び出される
+// onTouchEventはイベントは20msごとまたは10msごとに呼び出される？
 
 public class TouchArea extends SurfaceView implements Callback {
     private SurfaceHolder mHolder;
@@ -92,15 +92,12 @@ public class TouchArea extends SurfaceView implements Callback {
             case MotionEvent.ACTION_DOWN:
                 onTouchDown(event.getX(), event.getY());
                 break;
-
             case MotionEvent.ACTION_MOVE:
                 onTouchMove(event.getX(), event.getY());
                 break;
-
             case MotionEvent.ACTION_UP:
                 onTouchUp(event.getX(), event.getY());
                 break;
-
             default:
         }
         return true;
