@@ -4,6 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.IBinder;
+import android.util.Log;
 
 import com.taka.robocon.robotcontroler.Bluetooth.Bluetooth;
 import com.taka.robocon.robotcontroler.Bluetooth.LineRecieveListener;
@@ -14,6 +15,12 @@ public class BluetoothConnectionService extends Service implements LineRecieveLi
     private final UUID SERVICE_UUID
             = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private final String DEVICE_NAME ="HC-06"; //接続先のデバイス名
+
+    // マイコンからの受信されるメッセージ
+    private final String RECIEVER_RECIEVED = "g";
+    private final String R = "";
+    private final String RE = "";
+
 
     public Bluetooth bluetooth;
     private Handler handler;
@@ -32,11 +39,13 @@ public class BluetoothConnectionService extends Service implements LineRecieveLi
         bluetooth.setRecieveListener(this);
         bluetooth.connect(SERVICE_UUID, DEVICE_NAME);
         handler = new Handler();
+        Log.d("Service", "上司に口を利くときは言葉の後ろにサーをつけろ！");
     }
 
     @Override
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
+        Log.d("Service", "サー(ビス)");
         throw new UnsupportedOperationException("Not yet implemented");
     }
 

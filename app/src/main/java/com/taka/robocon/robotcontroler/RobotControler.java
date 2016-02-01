@@ -58,6 +58,11 @@ public class RobotControler extends Activity {
             SurfaceView touchArea = (SurfaceView) findViewById(R.id.touch_area);
             Log.d("Width & Heith", String.valueOf(touchArea.getWidth()) + String.valueOf(touchArea.getHeight()));
         }
+
+        startService(new Intent(RobotControler.this,
+                BluetoothConnectionService.class));
+        bindService(new Intent(RobotControler.this,
+                BluetoothConnectionService.class), );
     }
 
     @Override
